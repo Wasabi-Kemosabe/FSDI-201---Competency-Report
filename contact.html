@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="mystyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Holiday Pet Care</title>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="main header-content">
+            <div class="bar">
+                <nav class="navigation">
+                    <a href="index.html">Home</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+            <div>
+                <h1>Welcome to Holiday Pet Care</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <h2>Register a Pet</h2>
+        <form>
+            <fieldset>
+                <legend>Pet Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" name="petName" id="petName" placeholder="Enter pet's name">
+
+                <label for="petAge">Age:</label>
+                <input type="number" name="petAge" id="petAge" placeholder="Enter pet's age">
+
+                <label for="services">Service</label>
+                <select id="services">
+                    <option value="" disabled selected>------ Select an option ------</option>
+                    <option value="Shower">Shower</option>
+                    <option value="Hair Cut">Hair Cut</option>
+                    <option value="Nails Cut">Nails Cut</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Owner's Information</legend>
+                <label for="ownerName">Owner's Name:</label>
+                <input type="text" name="ownerName" id="ownerName" placeholder="Enter owner's name">
+
+                <label for="ownerPhone">Contact Phone:</label>
+                <input type="text" name="ownerPhone" id="ownerPhone" placeholder="Enter owner's phone number">
+            </fieldset>
+
+            <input id="registerBtn" type="button" value="Submit" class="butn" onclick="registerPet()">
+        </form>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Type the name of the pet" name="search"
+                            id="search">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" class="button-addon2"
+                                onclick="searchPet()">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id="petList">
+
+            </div>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Service</th>
+                    <th>Owner's Name</th>
+                    <th>Contact Phone</th>
+                </thead>
+                <tbody id="listBody">
+
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <div class="content">
+        <footer class="footer">
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="copyright">
+                <p>All rights reserved &copy; Angelo Totanes</p>
+            </div>
+        </footer>
+    </div>
+    <script src="petsalon.js"></script>
+</body>
+
+</html>
